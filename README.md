@@ -1,39 +1,25 @@
-# D3-Project . Data Journalism and D3
+# Data Journalism by D3
 
-This project has been deployed on Heroku: https://d3-times.herokuapp.com/
+## Preview
+This application provides analysis and visulization for the health risks faced by various demographics from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System dataset 
 
-Background
-Welcome to the newsroom! You've just accepted a data visualization position for a major metro paper. You're tasked with analyzing the current trends shaping people's lives, as well as creating charts, graphs, and interactive elements to help readers understand your findings.
+[View Website](https://d3-times.herokuapp.com/)
 
-The editor wants to run a series of feature stories about the health risks facing particular demographics. She's counting on you to sniff out the first story idea by sifting through the latest information from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System.
+## Method and Usage
 
-Your Task
-Level 1: D3 Dabbler
-You need to create a scatter plot between two of the data variables such as Healthcare vs. Poverty or Smokers vs. Age.
+### Step 1: Data ETL development
 
-Using the D3 techniques we taught you in class, create a scatter plot that represents each state with circle elements. You'll code this graphic in the app.js file of your homework directory—make sure you pull in the data from data.csv by using the d3.csv function. Your scatter plot should ultimately appear like the image at the top of this section.
+  * Demographic information is pulled from the [U.S. Census Bureau's American Community Survey](http://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml)
+  
+  * Data for health risk factors is collected from the [Behavioral Risk Factor Surveillance System](https://chronicdata.cdc.gov/Behavioral-Risk-Factors/BRFSS-2014-Overall/5ra3-ixqq)
+  * Combine and clean up two dataset by excel and pandas
+  
+### Step 2: Data visulization 
+  * Create a scatter plot by d3.js between two of the data variables such as Healthcare vs. Poverty or Smokers vs. Age
 
-Include state abbreviations in the circles.
+  * Incorporate d3-tip.js plugin to display detailed information for each circle when user hovers their cursor over the element
+  
+  * Build click events function to make the chart dynamics and interactive and allow users to select risk factors for each axis
+  
+  * Animate the transitions for each data' locations as well as the range of the axes
 
-Create and situate your axes and labels to the left and bottom of the chart.
-
-Note: You'll need to use python -m http-server to run the visualization. This will host the page at localhost:8000 in your web browser.
-
-Level 2: Impress the Boss (Optional Challenge Assignment)
-Why make a static graphic when D3 lets you interact with your data?
-1. More Data, More Dynamics
-You're going to include more demographics and more risk factors. Place additional labels in your scatter plot and give them click events so that your users can decide which data to display. Animate the transitions for your circles' locations as well as the range of your axes. Do this for two risk factors for each axis. Or, for an extreme challenge, create three for each axis.
-
-Hint: Try binding all of the .csv data to your circles. This will let you easily determine their x or y values when you click the labels.
-2. Incorporate d3-tip
-While the ticks on the axes allow us to infer approximate values for each circle, it's impossible to determine the true value without adding another layer of data. Enter tooltips: developers can implement these in their D3 graphics to reveal a specific element's data when the user hovers their cursor over the element. Add tooltips to your circles and display each tooltip with the data that the user has selected. Use the d3-tip.js plugin developed by Justin Palmer—we've already included this plugin in your assignment directory.
-
-Your final product will be assessed on the following metrics:
-
-Completion of all steps in chosen level
-
-Coherency of scatter plot (labels, ticks)
-
-Visual attraction
-
-Professionalism
