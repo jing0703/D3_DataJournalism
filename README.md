@@ -1,7 +1,7 @@
 # Data Journalism by D3
 
 ## Preview
-This application provides analysis and visulization for the health risks faced by various demographics from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System dataset 
+This application provides analysis and visulization for the health risks faced by various demographics
 
 [View Website](https://d3-times.herokuapp.com/)
 
