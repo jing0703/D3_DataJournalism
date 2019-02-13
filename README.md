@@ -21,5 +21,4 @@ This application provides analysis and visulization for the health risks faced b
   
   * Build click events to make the chart dynamics and interactive and allow users to select risk factors for each axis
   
-  * Animate the transitions for each data' locations as well as the range of the axes
-
+  * Animate the transitions for each data's location as well as the range of the axes
